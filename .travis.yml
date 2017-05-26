@@ -16,7 +16,7 @@ before_script:
 script:
   - ./vendor/bin/phpunit --coverage-clover ./tests/logs/clover.xml
 after_success:
-  - php vendor/bin/coveralls -v
+  - travis_retry php vendor/bin/coveralls
 cache:
   apt: true
   directories:
