@@ -10,7 +10,7 @@ matrix:
   allow_failure:
     - php: 7.1
 before_install:
-  - composer install --dev
+  - composer install
 before_script:
   - mkdir -p tests/logs
 script:
