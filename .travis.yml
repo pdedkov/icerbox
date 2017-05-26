@@ -1,0 +1,27 @@
+language: php
+
+sudo: false
+php:
+  - 5.4
+  - 5.6
+  - 7.1
+matrix:
+  fast_finish: true
+  allow_failure:
+    - php: 7.1
+before_install:
+  - composer install --dev
+before_script:
+  - mkdir -p tests/logs
+script:
+  - ./vendor/bin/phpunit --coverage-clover ./tests/logs/clover.xml
+after_success:
+  - php vendor/bin/coveralls -v
+cache:
+  apt: true
+  directories:
+    - vendor
+notifications:
+  email:
+    on_success: change
+    on_failure: change
