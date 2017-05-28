@@ -1,7 +1,7 @@
 <?php
-namespace Icerbox\User;
+namespace Icerbox\Api\User;
 
-use Icerbox\Base;
+use Icerbox\Api\Base;
 
 class Account extends Base {
 	protected $_resource = 'user/account';

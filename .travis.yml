@@ -13,6 +13,7 @@ before_install:
   - composer install
 before_script:
   - mkdir -p tests/logs
+  - cp tests/config.default.php tests/config.php
 script:
   - ./vendor/bin/phpunit --coverage-clover ./tests/logs/clover.xml
 cache:

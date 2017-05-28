@@ -1,7 +1,7 @@
 <?php
-namespace Icerbox\Auth;
+namespace Icerbox\Api\Auth;
 
-use Icerbox\Base;
+use Icerbox\Api\Base;
 
 class Logout extends Base {
 	protected $_resource = 'auth/logout';
@@ -14,7 +14,7 @@ class Logout extends Base {
 	 * @return bool
 	 */
 	public function run($options = []) {
-		return (bool)parent::run($options)->json()['message'];
+		return (bool)parent::run($options)->json()[0]['message'];
 	}
 }
 

@@ -7,7 +7,7 @@
         processIsolation="false"
         stopOnFailure="false"
         syntaxCheck="true"
-        bootstrap="vendor/autoload.php"
+        bootstrap="tests/bootstrap.php"
 >
     <testsuites>
         <testsuite name="Icerbox Test Suite">

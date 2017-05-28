@@ -1,5 +1,5 @@
 <?php
-namespace Icerbox;
+namespace Icerbox\Api;
 
 class Exception extends \RuntimeException {
 

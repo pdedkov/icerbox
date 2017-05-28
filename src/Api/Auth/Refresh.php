@@ -1,7 +1,7 @@
 <?php
-namespace Icerbox\Auth;
+namespace Icerbox\Api\Auth;
 
-use Icerbox\Base;
+use Icerbox\Api\Base;
 
 class Refresh extends Base {
 	protected $_resource = 'auth/refresh';

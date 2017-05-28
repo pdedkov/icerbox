@@ -1,4 +1,4 @@
 vendor/
-tests/Auth/config.php
+tests/config.php
 .idea
 .DS_STORE

@@ -1,13 +1,18 @@
 <?php
-namespace Icerbox\Auth;
+namespace Icerbox\Api\Auth;
 
-use Icerbox\Base;
-use Icerbox\Exception as BaseException;
+use Icerbox\Api\Base;
+use Icerbox\Api\Exception as BaseException;
 
 class Login extends Base {
 	protected $_resource = 'auth/login';
 
 	protected $_method = 'POST';
+
+	/**
+	 * @var bool
+	 */
+	protected $_isTokenRequired = false;
 
 	/**
 	 * Login to API
