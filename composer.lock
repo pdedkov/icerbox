@@ -67,7 +67,6 @@
             "time": "2016-01-28 19:20:39"
         },
         {
->>>>>>> work with api
             "name": "guzzlehttp/guzzle",
             "version": "4.x-dev",
             "source": {
@@ -191,12 +190,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pdedkov/url.git",
-                "reference": "439434425f70976670019a8b18dc925615e9ba7b"
+                "reference": "705175b55e972fb20585fb19bf9dbc6e6e9aa2c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pdedkov/url/zipball/439434425f70976670019a8b18dc925615e9ba7b",
-                "reference": "439434425f70976670019a8b18dc925615e9ba7b",
+                "url": "https://api.github.com/repos/pdedkov/url/zipball/705175b55e972fb20585fb19bf9dbc6e6e9aa2c2",
+                "reference": "705175b55e972fb20585fb19bf9dbc6e6e9aa2c2",
                 "shasum": ""
             },
             "require": {
@@ -223,8 +222,7 @@
                 }
             ],
             "description": "simple url process library",
-            "time": "2017-05-27 20:07:19"
->>>>>>> work with api
+            "time": "2017-05-27 20:26:25"
         }
     ],
     "packages-dev": [
