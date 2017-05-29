@@ -15,15 +15,24 @@ class FileTest extends \PHPUnit_Framework_TestCase {
 	 */
 	protected $_testFileId = 'pO97jKGl';
 
+	protected $_testInvalid = 'invalidFileId';
+
 	public function setUp() {
 		parent::setUp();
 		$this->_File = new Api\File();
 	}
 
 	/**
+	 * @expectedException \Icerbox\Api\Exception
+	 */
+	public function testShouldGetInvalidFile() {
+		$this->_File->run(['id' => $this->_testInvalid]);
+	}
+
+	/**
 	 * Test should get file info
 	 */
 	public function testShouldGetFileInfo() {
-		$this->assertEquals($this->_testFileId, $this->_File->run(['query' => ['id' => $this->_testFileId]])['id']);
+		$this->assertEquals($this->_testFileId, $this->_File->run(['id' => $this->_testFileId])['id']);
 	}
 }

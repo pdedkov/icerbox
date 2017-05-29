@@ -17,6 +17,6 @@ class Folder extends Base {
 	 * @return arrat file info
 	 */
 	public function run($options = []) {
-		return parent::run($options)->json();
+		return parent::run(['query' => $options])->json();
 	}
 }

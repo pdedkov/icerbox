@@ -15,9 +15,15 @@ class FilesTest extends \PHPUnit_Framework_TestCase {
 	 */
 	protected $_testFilesId = ['pO97jKGl'];
 
+	protected $_testFilesWithInvalidId = ['pO97jKGl', 'invalidFileId'];
+
 	public function setUp() {
 		parent::setUp();
 		$this->_Files = new Api\Files();
+	}
+
+	public function testShouldGetInvalidFile() {
+		$this->assertEquals(1, count($this->_Files->run(['ids' => $this->_testFilesWithInvalidId])));
 	}
 
 	/**
@@ -26,7 +32,7 @@ class FilesTest extends \PHPUnit_Framework_TestCase {
 	public function testShouldGetFileInfo() {
 		$this->assertEquals(
 			$this->_testFilesId[0],
-			$this->_Files->run(['query' => ['ids' => $this->_testFilesId]])[0]['id']
+			$this->_Files->run(['ids' => $this->_testFilesId])[0]['id']
 		);
 	}
 }

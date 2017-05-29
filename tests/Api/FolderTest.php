@@ -16,9 +16,18 @@ class FolderTest extends \PHPUnit_Framework_TestCase {
 	protected $_testFolderId = 'pxB7zB8q';
 	protected $_testFolderName = 'iN1705DevDri';
 
+	protected $_testFolderInvalid = 'invalidFolderId';
+
 	public function setUp() {
 		parent::setUp();
 		$this->_Folder = new Api\Folder();
+	}
+
+	/**
+	 * @expectedException \Icerbox\Api\Exception
+	 */
+	public function testShouldGetInvalidFile() {
+		$this->_Folder->run(['id' => $this->_testFolderInvalid]);
 	}
 
 	/**
@@ -27,7 +36,7 @@ class FolderTest extends \PHPUnit_Framework_TestCase {
 	public function testShouldGetFileInfo() {
 		$this->assertEquals(
 			$this->_testFolderName,
-			$this->_Folder->run(['query' => ['id' => $this->_testFolderId]])['name']
+			$this->_Folder->run(['id' => $this->_testFolderId])['name']
 		);
 	}
 }

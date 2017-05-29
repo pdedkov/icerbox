@@ -17,6 +17,6 @@ class File extends Base {
 	 * @return array file info
 	 */
 	public function run($options = []) {
-		return parent::run($options)->json()['data'];
+		return parent::run(['query' => $options])->json()['data'];
 	}
 }
