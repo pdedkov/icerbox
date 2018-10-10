@@ -27,7 +27,7 @@ class Login extends Base {
 			return parent::run(['json' => $options])->json()['token'];
 		} catch (BaseException $e) {
 			if ($e->getCode() == Exception::CODE_CAPTHA) {
-				throw new Exception("Captcha", $e->getCode());
+				throw new Exception("Captcha: {$e->getMessage()}", $e->getCode());
 			} else {
 				throw $e;
 			}
